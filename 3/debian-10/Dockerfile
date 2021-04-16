@@ -7,8 +7,8 @@ ENV HOME="/" \
     OS_NAME="linux"
 
 # ========= <patched>
-ENV CASSANDRA_VERSION=3.6
-ENV CASSANDRA_SHA1=00ded1955444626add2367b5871153dd604eeae0
+ENV CASSANDRA_VERSION=3.0.10
+ENV CASSANDRA_SHA1=81ecfc184e7fb84ac4ad006bc3ce1691ff2c03a8
 # ========= </patched>
 
 COPY prebuildfs /
