@@ -58,13 +58,6 @@ if is_cassandra_running; then
         exec "${__run_tail_cmd}" "${__run_tail_flags[@]}"
     fi
 else
-
-    # Vandebron addition
-    if [ -f "/docker-entrypoint-initdb.d/script/mesos_wrapper.sh" ]; then
-        info "Mesos wrapper found, sourcing it"
-        source /docker-entrypoint-initdb.d/script/mesos_wrapper.sh
-    fi
-
     readonly __run_cmd="${CASSANDRA_BIN_DIR}/cassandra"
     readonly __run_flags=("-p $CASSANDRA_PID_FILE" "-R" "-f")
     if am_i_root; then
