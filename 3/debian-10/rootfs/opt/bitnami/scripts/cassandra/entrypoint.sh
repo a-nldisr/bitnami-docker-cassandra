@@ -25,7 +25,7 @@ fi
 # Vandebron addition
 if [ -f "/docker-entrypoint-initdb.d/script/mesos_wrapper.sh" ]; then
     info "** Mesos wrapper found, sourcing it **"
-    source /docker-entrypoint-initdb.d/script/mesos_wrapper.sh
+    source /custom/script/mesos_wrapper.sh
 fi
 
 
