@@ -23,11 +23,10 @@ if [[ "$*" = *"/opt/bitnami/scripts/cassandra/run.sh"* || "$*" = "/run.sh" ]]; t
 fi
 
 # Vandebron addition
-if [ -f "/docker-entrypoint-initdb.d/script/mesos_wrapper.sh" ]; then
+if [ -f "/custom/script/mesos_wrapper.sh" ]; then
     info "** Mesos wrapper found, sourcing it **"
     source /custom/script/mesos_wrapper.sh
 fi
-
 
 echo ""
 exec "$@"
